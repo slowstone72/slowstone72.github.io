@@ -1,0 +1,89 @@
+<!-- Callum Fisher - cf.fisher.bham@gmail.com
+Edited: 14.12.2022 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/standard.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Crystal FM was a bot built for playing music in voice channels on Discord. Unlike most Discord music bots at the time, Crystal FM was not intended for on-demand song requests. Instead, it provided easy access to a steady stream of specific songs.">
+		<title>Crystal FM: A radio-like music provider for Discord | Callum Fisher's Projects</title>
+    </head>
+	<!-- 28/05/2019 -->
+    <body>
+		<div class="navbar" id="top">
+			<a href="../index.html" class="button">Directory</a>
+			<a href="../index.html#software" class="button secondary">More software</a>
+		</div>
+        <main class="content">
+			<div class="box">
+				<article>
+					<h1>Crystal FM: A radio-like music provider for Discord</h1>
+					<section id="intro">
+						<h2>What is Crystal FM?</h2>
+						<img src="media/cfm.png" class="shadow" style="float: left;" alt="Crystal FM logo">
+						<p>
+							Crystal FM was a radio-like music provider built for <a href="https://discord.com/">Discord, an online messaging & voice service</a>.
+							Rather than serving on-demand song requests (as many other Discord-based music services did), Crystal FM simply provided easy access to a steady stream of cherry-picked songs.
+						</p>
+						<p>
+							The songs Crystal FM played primarily consisted of pop music released between the 1960s and 1990s, which was complemented with a wide range of unique instrumental tracks.
+							They could've been songs I'd heard in movies, on the radio, or anywhere else where music happened to be playing.
+						</p>
+						<p>
+							Crystal FM was online for about a year, after which it became impractical to keep the service running.
+							The bot was primarily used within a group of online friends when we would regularly listen to music together.
+						</p>
+					</section>
+					<hr>
+					<section id="hist">
+						<h2>History</h2>
+						<p>
+							Originally, Crystal FM existed under a different name: <b>Wave24R</b>, which stood for "Wave24 Radio" - the "24" referencing the 24/7 music playback on offer.
+						</p>
+						<p>
+							The initial version of the bot was accompanied by a separate service titled <b>Pre70sR</b>, short for Pre-1970s Radio.
+							As the name suggests, this version of the bot was dedicated to any tracks released before the 1970s. It played many of the older tracks I had in my collection.
+							By separating the two services, Wave24 Radio could continue without mixing too many distinct eras, which would have resulted in an inconsistent listening experience.
+						</p>
+					</section>
+					<hr>
+					<section id="dev">
+						<h2>Development</h2>
+						<img src="media/w24rr2.png" style="float: right;" alt="'Wave24R (rewrite #2)'">
+						<p>There are three iterations of the code powering Crystal FM:
+							<ol>
+								<b><li>Wave24R Discord Bot</li></b>
+								<p>
+									This version of Wave24R is a modular Discord bot built to represent different "brands" of music bot (such as Crystal FM).
+								</p>
+								<b><li>Wave24R Icecast Server</li></b>
+								<p>
+									This version of Wave24R was intended for use as an internet radio station. It created an audio livestream to broadcast the music to any client.
+									This worked in parallel with a simple Discord bot I built to listen to the stream (amongst others) in any Discord voice channel.<br>
+									To use it, you simply connected to a voice channel and sent a chat command specifying which station you wanted to listen to.
+								</p>
+								<b><li>Crystal FM based on "S.A.F.E."</li></b>This was the final rewrite of Crystal FM
+							</ol>
+						</p>
+					</section>
+					<hr>
+					<section>
+						<h3>Technical Details</h3>
+						<p>
+							Crystal FM was written in <a href="js.html">JavaScript</a>. More specifically, the server-side runtime environment <a href="https://nodejs.org">Node.js</a>.<br>
+							I hosted Crystal FM on a Dell OptiPlex 780 desktop computer for about a year, after which it was no longer practical to keep running.
+						</p>
+					</section>
+				</article>
+			</div>
+		</main>
+    </body>
+	<footer>
+		<p>
+			Published: <time datetime="2022-4-12">12.4.2022</time><br>
+			Edited: <time datetime="2023-1-5">5.1.2023</time>
+		</p>
+	</footer>
+</html>
