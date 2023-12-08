@@ -1,20 +1,26 @@
-/* Callum Fisher - cf.fisher.bham@gmail.com
-Edited: 8.12.2022 */
+/* Callum Fisher - callumfisher2006@gmail.com
+Last Edited: 2023.12.8 */
 
 body {
 	background: rgb(220, 220, 220);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
+	/* background-repeat: no-repeat;
+    background-attachment: fixed; */
 	font-family: "Dosis";
 	margin: 0;
 }
 
+th, td {
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background: rgb(240, 240, 240);
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
-		background: rgb(20,20,20);
-		background-repeat: no-repeat;
-    	background-attachment: fixed;
-		font-family: "Dosis";
+		background: rgb(20, 20, 20);
+		/* background-repeat: no-repeat;
+    	background-attachment: fixed; */
 		margin: 0;
 	}
 	a {
@@ -25,6 +31,12 @@ body {
 	}
 	a:not(.button):visited {
 		color: rgb(153,154,255);
+	}
+	th, td {
+		border: 1px solid rgb(20, 20, 20);
+		background: rgb(20, 20, 20);
+		color: rgb(210, 210, 210);
+		
 	}
 }
 
@@ -158,8 +170,8 @@ main {
 	width: 100%;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 25%;
-	padding-right: 25%;
+	padding-left: 10%;
+	padding-right: 10%;
 	box-sizing: border-box;
 	border-radius: 10px;
 	display: grid;
@@ -192,8 +204,7 @@ article {
 	padding: 20px;
 	word-wrap: break-word;
 	overflow: hidden;
-	border-top-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-radius: 10px;
 	border-bottom: gray ridge;
 	border-width: 1px;
 	text-align: center;
@@ -230,8 +241,8 @@ article {
 .navbar {
 	background: white;
 	overflow: hidden;
-	padding-left: 25%;
-	padding-right: 25%;
+	padding-left: 15%;
+	padding-right: 15%;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	border-bottom-right-radius: 5px;
