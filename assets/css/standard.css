@@ -368,12 +368,12 @@ iframe {
 
 /* Dark Theme */
 
-@media (prefers-color-scheme: dark) {
-	body {
-		--pagefind-ui-primary: #eeeeee;
-		--pagefind-ui-text: #eeeeee;
-		--pagefind-ui-background: rgb(20, 20, 20);
-		--pagefind-ui-border: rgb(60, 60, 60);
-		--pagefind-ui-tag: #152028
-	};
+/* @media (prefers-color-scheme: dark) { */
+body {
+	--pagefind-ui-primary: #eeeeee;
+	--pagefind-ui-text: #eeeeee;
+	--pagefind-ui-background: rgb(20, 20, 20);
+	--pagefind-ui-border: rgb(60, 60, 60);
+	--pagefind-ui-tag: #152028
 }
+/* } */
