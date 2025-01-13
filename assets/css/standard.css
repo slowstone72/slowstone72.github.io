@@ -36,7 +36,6 @@ body {
 
 .button {
 	color: black;
-	font-family: "Dosis";
 	text-align: center;
 	float: left;
 	border: none;
@@ -132,7 +131,6 @@ img.shadow {
 
 main {
 	color: black;
-	font-family: "Dosis"; /* Roboto */
 	width: 100%;
 	padding-top: 0.2%;
 	padding-bottom: 1%;
@@ -148,7 +146,6 @@ main {
 
 footer {
 	color: black;
-	font-family: "Dosis";
 	text-align: center;
 }
 
@@ -157,17 +154,15 @@ article {
 	text-align: left;
 }
 
-article h1, h2, h3 {
+/* article h1, h2, h3 {
 	font-family: "Dosis";
-}
+} */
 
 h1, h2 {
-	font-family: "Dosis";
 	font-size: 2rem;
 }
 
 h3 {
-	font-family: "Dosis";
 	font-size: 1.5rem;
 }
 
