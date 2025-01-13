@@ -1,0 +1,287 @@
+/* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
+2024.08.09 - 2025.01.13 */
+
+@font-face {
+	font-family: "Dosis";
+	src: url("../media/fonts/Dosis/Dosis-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../media/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+html {
+	font-family: "Roboto";
+	font-size: 1rem;
+}
+
+body {
+	background: rgb(220, 220, 220);
+	color: rgb(0, 0, 0);
+	margin: 0;
+	--pagefind-ui-font: "Roboto";
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+	}
+	a {
+		color: rgb(153, 215, 255);
+	}
+	a:not(.button):hover {
+		color: rgb(220, 220, 220);
+	}
+	a:not(.button):visited {
+		color: rgb(153, 154, 255);
+	}
+}
+
+.button {
+	color: black;
+	font-family: "Dosis";
+	text-align: center;
+	float: left;
+	border: none;
+	padding: 0.6rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+	border-radius: 5px;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@keyframes flashy {
+	0% {
+		background: rgb(120, 134, 155);
+	}
+	50% {
+		background: rgb(153, 154, 255);
+	}
+	100% {
+		background: rgb(120, 134, 155);
+	}
+}
+
+.button.flashy {
+	color: white;
+	animation: flashy 14s linear infinite;
+}
+
+.button:hover {
+	background: rgb(200, 200, 200);
+}
+
+.button.background {
+	background: rgb(220, 220, 220);
+	color: black;
+}
+
+.button.inactive {
+	color: gray;
+}
+
+.button.inactive:hover {
+	cursor: not-allowed;
+}
+
+.button.secondary {
+	float: right;
+}
+
+.button.nofloat {
+	float: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.button {
+		color: rgb(255, 255, 255);
+	}
+	.button:hover {
+		background: rgb(60, 60, 60);
+		color:white;
+	}
+	.button.background {
+		background: rgb(60, 60, 60);
+		color:white;
+	}
+	@keyframes flashy {
+		0% {
+			background: rgb(20, 20, 20);
+		}
+		50% {
+			background: rgb(153, 154, 255);
+			color: white;
+		}
+		100% {
+			background: rgb(20, 20, 20);
+		}
+	}
+}
+
+img {
+	padding: 20px;
+}
+
+img.shadow {
+	filter: drop-shadow(2px 2px 2px black); 
+}
+
+main {
+	color: black;
+	font-family: "Roboto";
+	width: 100%;
+	padding-top: 0.2%;
+	padding-bottom: 1%;
+	padding-left: 20%;
+	padding-right: 20%;
+	box-sizing: border-box;
+	border-radius: 1%;
+	display: grid;
+	gap: 0.2%;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+}
+
+footer {
+	color: black;
+	font-family: "Dosis";
+	text-align: center;
+}
+
+article {
+	font-size: 1rem;
+	text-align: left;
+}
+
+article h1, h2, h3 {
+	font-family: "Dosis";
+}
+
+h1, h2 {
+	font-family: "Dosis";
+	font-size: 2rem;
+}
+
+h3 {
+	font-family: "Dosis";
+	font-size: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	main {
+		color: rgb(210, 210, 210);
+	}
+	footer {
+		color: rgb(210, 210, 210);
+	}
+}
+
+.box {
+	background: rgb(255, 255, 255);
+	color: black;
+	word-wrap: break-word;
+	text-align: center;
+	overflow: hidden;
+	padding: 2%;
+	border-radius: 10px;
+	border-bottom: gray ridge;
+	border-width: 1px;
+}
+
+.box.nocenter {
+	text-align: left;
+}
+
+@media (prefers-color-scheme: dark) {
+	.box {
+		background: rgb(32, 32, 32);
+		color: rgb(255, 255, 255);
+	}
+}
+
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+}
+
+@keyframes animateBg {
+	0% { background-position: 0% 0%; }
+	100% { background-position: 100% 0%; }
+  }	  
+
+.navbar {
+	background: white;
+	overflow: hidden;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom: gray ridge;
+	border-width: 1px;
+	/* position: sticky; - disabled due to #tags not being scrolled to accurately, navbar in the way
+	top: 0;
+	z-index: 1; /* images overlap this element for some reason, so we need to move it forward in the z axis */
+}
+
+@media (prefers-color-scheme: dark) {
+	.navbar {
+		background: rgb(32, 32, 32);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	main {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--pagefind-ui-primary: #eeeeee;
+		--pagefind-ui-text: #eeeeee;
+		--pagefind-ui-background: rgb(20, 20, 20);
+		--pagefind-ui-border: rgb(60, 60, 60);
+		--pagefind-ui-tag: #152028
+	};
+}
