@@ -366,23 +366,6 @@ iframe {
 	z-index: 1;
 }
 
-/* Font Awesome Config: */
-
-/* .fa {
-	padding: 1rem;
-	font-size: 1rem;
-	width: 1rem;
-	text-align: center;
-	text-decoration: none;
-	margin: 1rem 1rem;
-	border-radius: 50%;
-}
-
-.fa-facebook {
-	background: #3B5998;
-	color: white;
-} */
-
 /* Dark Theme */
 
 @media (prefers-color-scheme: dark) {
