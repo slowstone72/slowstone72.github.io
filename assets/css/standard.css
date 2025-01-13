@@ -261,7 +261,7 @@ h3 {
 	/* Stack menu items vertically */
 	.menu-items {
 		background-color: rgb(32, 32, 32);
-		background-image: url("../media/backgrounds/chalkboard.jpg");
+		/* background-image: url("../media/backgrounds/chalkboard.jpg"); */
 		display: none;
 		flex-direction: column;
 		gap: 10px;
