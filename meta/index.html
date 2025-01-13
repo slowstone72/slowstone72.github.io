@@ -10,28 +10,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="The Meta section is a central hub for quick links to important site information such as Copyright & Licensing, contribution and contact information.">
 		<title>Meta | Callum Fisher</title>
-		<!-- <script src="../assets/js/misc/localGreet.js"></script>
-		<script src="../pagefind/pagefind-ui.js"></script>
-		<script>
-			window.addEventListener("load", () => {
-				new PagefindUI({
-					element: "#pageFindSearch",
-					showSubResults: true,
-					showImages: false,
-					debounceTimeoutMs: 1000,
-					translations: {
-						placeholder: "Type here to search"
-					}
-				});
-			});
-		</script> -->
+		<script src="../assets/js/hamburgerMenuToggle.js"></script>
 	</head>
 	<body>
 		<div class="navbar" id="top">
-			<a class="button" href="../index.html">Directory</a>
-			<a class="button secondary" href="about/index.html">About</a>
-			<a class="button secondary" href="contribute/index.html">Contribute</a>
-			<a class="button secondary" href="changelog/index.html">Changelog</a>
+			<span class="hamburger" onclick="toggleHamburgerMenu()">☰</span>
+			<div class="menu-items" id="menuItems">
+				<div class="primary-buttons">
+					<a class="button" href="../index.html">Directory</a>
+				</div>
+				<div class="secondary-buttons">
+					<a class="button secondary" href="about/index.html">About</a>
+					<a class="button secondary" href="contribute/index.html">Contribute</a>
+					<a class="button secondary" href="changelog/index.html">Changelog</a>
+				</div>
+			</div>
 		</div>
 		<main>
 			<div class="box">

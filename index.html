@@ -10,16 +10,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Hi. I'm Callum. I've been coding stuff since age 9, and hopefully most of that stuff will end up documented here. Thanks for checking in.">
 		<title>Directory | Callum Fisher</title>
+		<script src="assets/js/hamburgerMenuToggle.js"></script>
 		<!-- <script src="assets/js/misc/localGreet.js"></script> -->
 		<script src="pagefind/pagefind-ui.js"></script>
 		<script>
-			window.addEventListener("load", () => {
+			window.addEventListener('load', () => {
 				new PagefindUI({
-					element: "#pageFindSearch",
+					element: '#pageFindSearch',
 					showSubResults: true,
 					showImages: false,
 					translations: {
-						placeholder: "Type here to search"
+						placeholder: 'Type here to search'
 					}
 				});
 			});
@@ -27,8 +28,16 @@
 	</head>
 	<body>
 		<div class="navbar" id="top">
-			<a class="button" href="#search">Search</a>
-			<a class="button secondary" href="meta/about/index.html">About</a>
+			<!-- <img src="media/badgeLogo.jpg" style="height: 2.8rem; width: 2.8rem; border-radius: 2rem; float: left; padding: 0.1rem;" alt="Logo"> -->
+			<span class="hamburger" onclick="toggleHamburgerMenu()">☰</span>
+			<div class="menu-items" id="menuItems">
+				<div class="primary-buttons">
+					<a class="button" href="#search">Search</a>
+				</div>
+				<div class="secondary-buttons">
+					<a class="button secondary" href="meta/about/index.html">About</a>
+				</div>
+			</div>
 		</div>
 		<main>
 			<div class="box">

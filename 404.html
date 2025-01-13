@@ -9,12 +9,18 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Where is it!? | Callum Fisher</title>
+		<script src="/assets/js/hamburgerMenuToggle.js"></script>
 		<script src="/pagefind/pagefind-ui.js"></script>
 		<script src="/assets/js/misc/pageFindAutoSearch.js"></script>
 	</head>
 	<body>
 		<div class="navbar">
-			<a class="button" href="/index.html">Directory</a>
+			<span class="hamburger" onclick="toggleHamburgerMenu()">☰</span>
+			<div class="menu-items" id="menuItems">
+				<div class="primary-buttons">
+					<a class="button" href="/index.html">Directory</a>
+				</div>
+			</div>
 		</div>
 		<main>
 			<div class="box">
