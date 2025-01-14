@@ -18,3 +18,10 @@ Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://font
 
 [Pagefind](https://github.com/CloudCannon/pagefind) search is licensed under the [MIT License](https://github.com/CloudCannon/pagefind/blob/main/LICENSE).
 
+## Directories
+
+### /a - assets
+/a/js - JS Code
+/a/css - Styles
+/a/img - Images/GIF
+/a/f - fonts
