@@ -14,7 +14,7 @@ See the respective [LICENSE_SOURCE.txt](https://github.com/slowstone72/slowstone
 
 ### Third-party Content
 
-Font [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://fonts.google.com/specimen/Roboto) are licensed under the [SIL OPEN FONT LICENSE Version 1.1](https://openfontlicense.org/open-font-license-official-text/).
+Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://fonts.google.com/specimen/Roboto) are licensed under the [SIL OPEN FONT LICENSE Version 1.1](https://openfontlicense.org/open-font-license-official-text/).
 
 [Pagefind](https://github.com/CloudCannon/pagefind) search is licensed under the [MIT License](https://github.com/CloudCannon/pagefind/blob/main/LICENSE).
 
