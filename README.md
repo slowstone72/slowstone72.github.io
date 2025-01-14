@@ -22,10 +22,7 @@ Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://font
 
 ### /a - assets
 
-/a/js - JS Code
-
-/a/css - Styles
-
-/a/img - Images/GIF
-
-/a/f - fonts
+- /a/js - JS Code
+- /a/css - Styles
+- /a/img - Images/GIF
+- /a/f - fonts
