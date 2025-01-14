@@ -1,6 +1,6 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
 pageFindAutoSearch.js - Automatically triggers a Pagefind (https://pagefind.app/) search for the URL path content.
-2024.08.26 - 2025.01.13 */
+2024.08.26 - 2025.01.14 */
 
 window.addEventListener('load', () => {
 	let pageFindSearch = new PagefindUI({
