@@ -6,6 +6,11 @@
 	src: url("../fonts/Dosis/Dosis-Regular.ttf");
 }
 
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/static/Roboto-Regular.ttf");
+}
+
 html {
 	font-family: "Dosis";
 	font-size: 1rem;
@@ -152,6 +157,7 @@ footer {
 }
 
 article {
+	font-family: "Roboto";
 	font-size: 1rem;
 	text-align: left;
 }
