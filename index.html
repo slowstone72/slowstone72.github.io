@@ -3,27 +3,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="a/css/standard.css">
-		<link rel="icon" type="image/png" href="favicon.png">
-		<link rel="stylesheet" href="pagefind/pagefind-ui.css" >
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="pagefind/pagefind-ui.css"/>
+		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
+		<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+		<link rel="manifest" href="site.webmanifest"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta name="description" content="Hi. I'm Callum. I've been coding stuff since age 9, and hopefully most of that stuff will end up documented here. Thanks for checking in.">
 		<title>Directory | Callum Fisher</title>
 		<script src="a/js/hamburgerMenuToggle.js"></script>
 		<script src="pagefind/pagefind-ui.js"></script>
-		<script>
-			window.addEventListener('load', () => {
-				new PagefindUI({
-					element: '#pageFindSearch',
-					showSubResults: false,
-					showImages: false,
-					translations: {
-						placeholder: Math.random() < 0.20 ? 'You can search with this thing' : 'Type here to search'
-					}
-				});
-			});
-		</script>
+		<script src="a/js/pageFindInit.js"></script>
 	</head>
 	<body>
 		<div class="navbar" id="top">
