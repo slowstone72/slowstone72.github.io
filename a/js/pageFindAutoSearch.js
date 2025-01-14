@@ -5,7 +5,7 @@ pageFindAutoSearch.js - Automatically triggers a Pagefind (https://pagefind.app/
 window.addEventListener('load', () => {
 	let pageFindSearch = new PagefindUI({
 		element: '#pageFindSearch',
-		showSubResults: true,
+		showSubResults: false,
 		showImages: false,
 		translations: {
 			placeholder: 'Type here to search'
