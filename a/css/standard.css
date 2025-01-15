@@ -360,3 +360,80 @@ hr {
 th, tr {
 	padding: 1rem;
 } */
+
+/* Dark Theme */
+
+@media (prefers-color-scheme: dark) {
+
+	/* Body */
+	
+	body {
+	
+		background: black;
+		color: white;
+	
+		/* Pagefind Search */
+	
+		--pagefind-ui-font: Roboto;
+		--pagefind-ui-primary: black;
+		--pagefind-ui-text: white;
+		--pagefind-ui-background: black;
+		--pagefind-ui-border: black;
+	
+	}
+	
+	/* Hyperlinks */
+	
+	body a:not(.button) {
+		color: wheat;
+	}
+	
+	body a:not(.button):hover { /* not .button - don't affect hyperlinks within buttons */
+		color: rgb(220, 220, 220);
+	}
+	
+	body a:not(.button):visited {
+		color: wheat
+	}
+	
+	/* Box */
+	
+	body .box {
+		background: black;
+		color: white;
+	}
+	
+	/* Buttons */
+	
+	body .button.background {
+		background: #f5deb3;
+		color: black;
+	}
+	
+	body .button.background:hover {
+		background: black;
+		color: white;
+	}
+	
+	/* Navbar */
+	
+	body .navbar {
+		background: black;
+	}
+	
+	body .navbar .button {
+		color: white;
+	}
+	
+	body .navbar .button:hover {
+		background: wheat;
+		color: black;
+	}
+	
+	/* Misc. */
+	
+	body hr {
+		color: black;
+	}
+	
+}
