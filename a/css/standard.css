@@ -429,6 +429,12 @@ th, tr {
 		background: wheat;
 		color: black;
 	}
+
+	/* Navbar Hamburger Button */
+
+	body .hamburger {
+		color: white;
+	}
 	
 	/* Misc. */
 	
