@@ -368,6 +368,11 @@ img {
 
 }
 
+figure {
+	display: inline-block; /* Keeps the image and caption together */
+	text-align: center; /* Centers the caption below the image */
+}
+
 /* Custom Pagefind Search Styling */
 
 body {
