@@ -13,7 +13,11 @@
 	src: url("../f/Roboto/static/Roboto-Regular.ttf");
 }
 
+
+/* Animations */
+
 /* Christmas "Icy" Button Theme: */
+
 @keyframes icy {
 	0% {
 		background: rgb(240, 240, 240); /* light icy white */
@@ -28,8 +32,6 @@
 		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
 	}
 }
-
-/* Animations */
 
 @keyframes fadeIn {
 	0% {
@@ -106,6 +108,14 @@ main {
 
 .box.nocenter { /* Don't center this box's text */
 	text-align: left;
+}
+
+.box.homely {
+	font-family: "Dosis";
+}
+
+.box.homely article {
+	font-family: "Dosis";
 }
 
 /* Articles */
@@ -208,6 +218,11 @@ footer {
 	cursor: not-allowed;
 }
 
+.button.inactive:hover {
+	background: black;
+	color: gray;
+}
+
 .button.secondary {
 	float: right;
 }
@@ -237,21 +252,27 @@ footer {
 
 }
 
-/* Hamburger icon styling */
+/* Hide the checkbox input */
+
+.hamburger-checkbox {
+	display: none;
+}
+
+/* Label for the hamburger icon - show only on smaller screens */
 
 .hamburger {
 
 	color: black;
 
-	display: none;
+	display: none; /* Hidden by default on wide screens */
 	font-size: 1.5rem;
 	cursor: pointer;
 	padding: 0.5rem;
 	margin-right: 1rem;
 
 }
-
-/* Menu items container */
+	
+/* Default menu items container */
 
 .menu-items {
 	display: flex;
@@ -260,43 +281,31 @@ footer {
 	width: 100%;
 }
 
-/* Float primary buttons to the left */
-
-.primary-buttons {
-	display: flex;
-	gap: 10px;
-}
-
-/* Float secondary buttons to the right */
-
-.secondary-buttons {
-	display: flex;
-	gap: 10px;
-	margin-left: auto;
-}
-
-/* Responsive styling */
+/* Responsive styling for screens smaller than 800px */
 
 @media screen and (max-width: 800px) {
 
-	/* Stack menu items vertically */
+	/* Make sure the hamburger icon is shown on smaller screens */
+
+	.hamburger {
+		display: block; /* Show hamburger icon */
+	}
+	
+	/* Stack menu items vertically when the menu is open */
 
 	.menu-items {
 		display: none;
 		flex-direction: column;
 		gap: 10px;
-		padding: 10px 0;
+		padding: 10px;	/* Adjust padding to add space inside the container */
+		width: 100%;
+		box-sizing: border-box; /* Prevent overflow */
+		margin: 0 auto; /* Center the menu within the screen */
 	}
 
-	/* Show the hamburger icon */
+	/* Show the menu items when the checkbox is checked */
 
-	.hamburger {
-		display: block;
-	}
-
-	/* Show menu items in list format when active */
-
-	.menu-items.active {
+	.hamburger-checkbox:checked + .hamburger + .menu-items {
 		display: flex;
 	}
 
@@ -306,17 +315,29 @@ footer {
 	.secondary-buttons {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start; /* Aligns items to the left */
-		width: 100%; /* Makes them take full width */
+		align-items: flex-start; /* Align buttons to the left */
+		width: 100%; /* Ensure buttons take full width inside the menu */
+		box-sizing: border-box; /* Prevent overflow */
+		padding-right: 1rem;
 	}
 
-	/* Stretch links (buttons) to take up 100% of the menu */
-
+	/* Stretch links (buttons) to take up 100% of the menu width */
 	.menu-items a {
-		width: 100%; /* Ensures links span the full width of the menu */
-		text-align: left; /* Don't center text */
+		display: block; /* Make sure the buttons stack vertically */
+		width: 100%; /* Ensure links span the full width of the menu */
+		text-align: left; /* Align text to the left */
+		padding: 0.8rem 1rem; /* Add padding for better spacing */
+		box-sizing: border-box; /* Include padding and border in element's total width */
+		border-radius: 5px; /* Ensure buttons have rounded corners */
 	}
+}
 
+/* Keep hamburger icon hidden on larger screens */
+
+@media screen and (min-width: 801px) {
+	.hamburger {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 1400px) {
@@ -418,16 +439,16 @@ th, tr {
 	body a:not(.button):visited {
 		color: wheat
 	}
-	
+
 	/* Box */
 	
 	body .box {
 		background: black;
 		color: white;
 	}
-	
+
 	/* Buttons */
-	
+
 	body .button.background {
 		background: #f5deb3;
 		color: black;
@@ -437,20 +458,31 @@ th, tr {
 		background: black;
 		color: white;
 	}
-	
+
 	/* Navbar */
-	
+
 	body .navbar {
 		background: black;
 	}
 	
-	body .navbar .button {
+	body .button {
 		color: white;
 	}
-	
-	body .navbar .button:hover {
+
+	body .button:hover {
 		background: wheat;
 		color: black;
+	}
+
+	body .button.inactive {
+		background: black;
+		color: gray;
+		cursor: not-allowed;
+	}
+
+	body .button.inactive:hover {
+		background: black;
+		color: gray;
 	}
 
 	/* Navbar Hamburger Button */
@@ -458,11 +490,11 @@ th, tr {
 	body .hamburger {
 		color: white;
 	}
-	
+
 	/* Misc. */
 	
 	body hr {
 		color: black;
 	}
-	
+
 }

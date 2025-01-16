@@ -13,11 +13,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta name="description" content="All things writing."/>
 		<title>Writing | Callum Fisher</title>
-		<script src="../a/js/hamburgerMenuToggle.js"></script>
 	</head>
 	<body>
 		<div class="navbar" id="top">
-			<span class="hamburger" onclick="toggleHamburgerMenu()">☰</span>
+			<input type="checkbox" class="hamburger-checkbox" id="hamburgerToggle">
+			<label for="hamburgerToggle" class="hamburger">☰</label>
 			<div class="menu-items" id="menuItems">
 				<div class="primary-buttons">
 					<a class="button" href="../index.html">Directory</a>
@@ -28,29 +28,41 @@
 			</div>
 		</div>
 		<main>
-			<div class="box">
+			<div class="box homely">
 				<article>
 					<h1>Writing</h1>
 					<p>
 						Welcome to the writing section. This section lists articles alongside my creative writing.
 					</p>
 					<hr>
-					<h3>Latest in Writing</h3>
+					<h3 id="latest">Latest in Writing</h3>
 					<ul>
-						<li><i>Coming Soon...</i></li>
+						<li>2024.08.04: <a href="20240804-department/index.html">Department of Unfinished Thoughts</a></li>
+						<li>2024.08.03: <a href="20240803-devotion/index.html">Devotion</a></li>
+						<li>2024.07.16: <a href="20240716-treasuring/index.html">Treasuring The Years</a></li>
+						<li>2024.07.11: <a href="20240711-audio-commuter/index.html">Audio Commuter</a></li>
 					</ul>
 				</article>
 			</div>
-			<!-- <div class="box">
+			<div class="box homely">
 				<article>
 					<h3>My Writing</h3>
-					<ul></ul>
+					<ul>
+						<li>2024.08.04: <a href="20240716-department/index.html">Department of Unfinished Thoughts</a></li>
+						<li>2024.08.03: <a href="20240803-devotion/index.html">Devotion</a></li>
+						<li>2024.07.16: <a href="20240716-treasuring/index.html">Treasuring The Years</a></li>
+						<li>2024.07.11: <a href="20240711-audio-commuter/index.html">Audio Commuter</a></li>
+						<li>2024.01.17: <a href="20240117-beauty-wishing-well/index.html">Beauty Wishing Well</a></li>
+						<li>2023.11.10: <a href="20231110-phone-lines/index.html">Phone Lines in Winter</a></li>
+						<li>2022.12.15: <a href="20221215-cry/index.html">Cry</a></li>
+						<li>2022.12.13: <a href="20221213-end-of-day/index.html">End of Day</a></li>
+					</ul>
 				</article>
-			</div> -->
+			</div>
 		</main>
 		<footer>
 			<p>
-				<time itemprop="dateCreated" datetime="2025-01-14">2025.01.14</time> - <time itemprop="dateModified" datetime="2025-01-14">2025.01.14</time>
+				<time itemprop="dateCreated" datetime="2025-01-14">2025.01.14</time> - <time itemprop="dateModified" datetime="2025-01-16">2025.01.16</time>
 			</p>
 			<p><a href="../copyright.html">Copyright & Licensing</a></p>
 		</footer>
