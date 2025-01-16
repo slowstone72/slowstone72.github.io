@@ -85,16 +85,18 @@ a:not(.button):visited {
 	animation: flashy 10s linear infinite;
 }
 
-.button.icy {
-	color: black;
-	animation: icy 14s infinite alternate; /* 14 seconds per cycle, alternate directions */
-}
-
 .button:hover {
 	color: white;
 	animation: none; /* Cancel "flashy" animation */
 	background: rgb(60, 60, 60);
 	transition: background-color 0.1s;
+}
+
+.button.icy {
+	/* color: black; */
+	/* animation: icy 14s infinite alternate; */ /* 14 seconds per cycle, alternate directions */
+	color: gray;
+	cursor: not-allowed;
 }
 
 .button.background {

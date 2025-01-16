@@ -13,6 +13,22 @@
 	src: url("../f/Roboto/static/Roboto-Regular.ttf");
 }
 
+/* Christmas "Icy" Button Theme: */
+@keyframes icy {
+	0% {
+		background: rgb(240, 240, 240); /* light icy white */
+		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
+	}
+	50% {
+		background: rgb(180, 210, 255); /* soft icy blue */
+		
+	}
+	100% {
+		background: rgb(240, 240, 240); /* light icy white */
+		box-shadow: 0 0 40px rgba(180, 210, 255, 0.6)
+	}
+}
+
 /* Animations */
 
 @keyframes fadeIn {
@@ -146,6 +162,13 @@ footer {
 	transition: transform 0.3s, background-color 0.3s;
 	width: auto; /* Let buttons size automatically */
 	max-width: none; /* Prevent fixed max-width */
+}
+
+/* Special Buttons */
+
+.button.icy {
+	color: black;
+	animation: icy 14s infinite alternate; /* 14 seconds per cycle, alternate directions */
 }
 
 .button:hover {
