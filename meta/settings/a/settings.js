@@ -6,21 +6,21 @@ let siteSettings;
 window.addEventListener('load', () => {
 	let loadSettings = () => {
 		let toggleAnalyticsButton = document.getElementById('toggleAnalytics');
-		if (localStorage.getItem('enableTracking') === 'true') {
-			toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Enable/g, 'Disable');
+		if (localStorage.getItem('enableAnalytics') === 'true') {
+			toggleAnalyticsButton.innerHTML = 'Disable Microsoft Clarity for Analytics';
 		} else {
-			toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Disable/g, 'Enable');
+			toggleAnalyticsButton.innerHTML = 'Enable Microsoft Clarity for Analytics';
 		}
 	}
 	siteSettings = {
 		toggleAnalytics: () => {
 			let toggleAnalyticsButton = document.getElementById('toggleAnalytics');
-			if (localStorage.getItem('enableTracking') === 'true') {
+			if (localStorage.getItem('enableAnalytics') === 'true') {
 				localStorage.setItem('enableTracking', 'false');
-				toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Disable/g, 'Enable');
+				toggleAnalyticsButton.innerHTML = 'Enable Microsoft Clarity for Analytics';
 			} else {
-				localStorage.setItem('enableTracking', 'true');
-				toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Enable/g, 'Disable');
+				localStorage.setItem('enableAnalytics', 'true');
+				toggleAnalyticsButton.innerHTML = 'Disable Microsoft Clarity for Analytics';
 			}
 			location.reload();
 		}
