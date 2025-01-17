@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
 		let settings = '/meta/settings/index.html';
 		let privacy = '/meta/privacy/index.html';
 		let statNotice = document.createElement('p'); 
-		statNotice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics. You can always <a href="${settings}">toggle this on or off</a>.<br>For more information, please refer to the <a href="${privacy}">privacy page</a>.`;
+		statNotice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics.<br>For more information, please refer to the <a href="${privacy}">privacy page</a>.`;
 		footer.appendChild(statNotice);
 	}
 });
