@@ -5,22 +5,22 @@ let siteSettings;
 
 window.addEventListener('load', () => {
 	let loadSettings = () => {
-		let toggleTrackingButton = document.getElementById('toggleTracking');
+		let toggleAnalyticsButton = document.getElementById('toggleAnalytics');
 		if (localStorage.getItem('enableTracking') === 'true') {
-			toggleTrackingButton.innerHTML = toggleTrackingButton.innerHTML.replace(/Enable/g, 'Disable');
+			toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Enable/g, 'Disable');
 		} else {
-			toggleTrackingButton.innerHTML = toggleTrackingButton.innerHTML.replace(/Disable/g, 'Enable');
+			toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Disable/g, 'Enable');
 		}
 	}
 	siteSettings = {
-		toggleTracking: () => {
-			let toggleTrackingButton = document.getElementById('toggleTracking');
+		toggleAnalytics: () => {
+			let toggleAnalyticsButton = document.getElementById('toggleAnalytics');
 			if (localStorage.getItem('enableTracking') === 'true') {
 				localStorage.setItem('enableTracking', 'false');
-				toggleTrackingButton.innerHTML = toggleTrackingButton.innerHTML.replace(/Disable/g, 'Enable');
+				toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Disable/g, 'Enable');
 			} else {
 				localStorage.setItem('enableTracking', 'true');
-				toggleTrackingButton.innerHTML = toggleTrackingButton.innerHTML.replace(/Enable/g, 'Disable');
+				toggleAnalyticsButton.innerHTML = toggleAnalyticsButton.innerHTML.replace(/Enable/g, 'Disable');
 			}
 			location.reload();
 		}
