@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
 		toggleAnalytics: () => {
 			let toggleAnalyticsButton = document.getElementById('toggleAnalytics');
 			if (localStorage.getItem('enableAnalytics') === 'true') {
-				localStorage.setItem('enableTracking', 'false');
+				localStorage.setItem('enableAnalytics', 'false');
 				toggleAnalyticsButton.innerHTML = 'Enable Microsoft Clarity for Analytics';
 			} else {
 				localStorage.setItem('enableAnalytics', 'true');
