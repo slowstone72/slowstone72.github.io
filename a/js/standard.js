@@ -2,6 +2,7 @@
 2025.01.17 */
 
 window.addEventListener('load', () => {
+	if (window.location.toString().includes('/writing/')) return;
 	if (typeof localStorage.enableAnalytics === 'undefined') localStorage.setItem('enableAnalytics', 'true');
 	if (localStorage.getItem('enableAnalytics') === 'true') {
 		(function(c, l, a, r, i, t, y) { // Microsoft Clarity for stats:
