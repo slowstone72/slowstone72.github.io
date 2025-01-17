@@ -11,9 +11,10 @@ window.addEventListener('load', () => {
 		})(window, document, 'clarity', 'script', 'pvf9bh18n4');
 		let footer = document.querySelector('footer');
 		if (!footer) return;
-		let settings = `/settings.html`;
+		let settings = '/meta/settings/index.html';
+		let privacy = '/meta/privacy/index.html';
 		let statNotice = document.createElement('p'); 
-		statNotice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for statistics. You can customize this on the <a href="${settings}">settings page</a>`;
+		statNotice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics. You can always <a href="${settings}">toggle this on or off</a>.<br>By using this site, you agree to the collection and use of data by both myself and Microsoft.<br>For more information, please refer to the <a href="${privacy}">privacy page</a>.`;
 		footer.appendChild(statNotice);
 	}
 });
