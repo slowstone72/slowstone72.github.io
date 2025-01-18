@@ -386,22 +386,23 @@ body {
 /* Cookie Consent Banner */
 
 .cookieBanner {
+
+	background: wheat;
+	color: black;
+
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #222;
-	color: white;
 	text-align: center;
 	padding: 15px;
 	z-index: 9999;
 	display: block;
 	animation: fadeIn 1s ease;
-	/* Added properties */
 	overflow-wrap: break-word; /* Ensures long strings wrap */
-	/* old browers: word-wrap: break-word; */
 	white-space: normal; /* Prevent text from staying on one line */
 	box-sizing: border-box; /* Ensures padding is included within width */
+
 }
 
 /* Misc. */
@@ -516,6 +517,29 @@ th, tr {
 		color: white;
 	}
 
+	/* Cookie Consent Banner */
+
+	.cookieBanner {
+		background: white;
+		color: black;
+	}
+
+	.cookieBanner .button {
+		color: black;
+	}
+
+	.cookieBanner a:not(.button) {
+		color: black;
+	}
+	
+	.cookieBanner a:not(.button):hover {
+		color: black;
+	}
+	
+	.cookieBanner a:not(.button):visited {
+		color: black;
+	}
+ 
 	/* Misc. */
 	
 	body hr {
