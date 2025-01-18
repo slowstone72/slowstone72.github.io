@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
 		banner.appendChild(message);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');
-		yes.textContent = 'Accept';
+		yes.textContent = 'Okay';
 		yes.addEventListener('click', () => {
 			localStorage.setItem('cookiesAccepted', 'true');
 			document.body.removeChild(banner);
