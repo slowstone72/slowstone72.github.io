@@ -14,7 +14,7 @@
 		<meta name="description" content="Customize settings like whether or not to collect analytics."/>
 		<title>Settings | Callum Fisher</title>
 		<script src="../../a/js/standard.js"></script>
-		<script src="../../a/settings.js"></script>
+		<script src="../../a/js/settings.js"></script>
 	</head>
 	<body>
 		<div class="navbar" id="top">
@@ -39,6 +39,15 @@
 					<hr>
 					<section>
 						<a class="button background" onclick="siteSettings.toggleAnalytics()" id="toggleAnalytics">Disable Microsoft Clarity for Analytics</a>
+					</section>
+					<section>
+						<a class="button background" onclick="siteSettings.toggleAds()" id="toggleAds">Disable Ads</a>
+					</section>
+					<hr>
+					<p>This website and its third-party services (Microsoft Clarity and Google AdSense) may use 'cookies' for analytics and ad personalization as detailed on the <a href="../privacy/index.html">privacy page</a>.</p>
+					<p>You can toggle all of these services entirely below.</p>
+					<section>
+						<a class="button background" onclick="siteSettings.toggleCookies()" id="toggleCookies">Revoke cookie permission</a>
 					</section>
 				</article>
 			</div>

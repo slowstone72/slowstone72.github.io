@@ -1,5 +1,5 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
-2024.08.09 - 2025.01.15 */
+2024.08.09 - 2025.01.18 */
 
 /* Fonts */
 
@@ -12,7 +12,6 @@
 	font-family: "Roboto";
 	src: url("../f/Roboto/static/Roboto-Regular.ttf");
 }
-
 
 /* Animations */
 
@@ -382,6 +381,27 @@ body {
 	--pagefind-ui-background: white;
 	--pagefind-ui-border: white;
 	/* --pagefind-ui-tag: brown; */
+}
+
+/* Cookie Consent Banner */
+
+.cookieBanner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	z-index: 9999;
+	display: block;
+	animation: fadeIn 1s ease;
+	/* Added properties */
+	overflow-wrap: break-word; /* Ensures long strings wrap */
+	/* old browers: word-wrap: break-word; */
+	white-space: normal; /* Prevent text from staying on one line */
+	box-sizing: border-box; /* Ensures padding is included within width */
 }
 
 /* Misc. */
