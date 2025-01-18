@@ -398,7 +398,7 @@ body {
 	padding: 15px;
 	z-index: 9999;
 	display: block;
-	animation: fadeIn 1s ease;
+	/* animation: fadeIn 1s ease; */
 	overflow-wrap: break-word; /* Ensures long strings wrap */
 	white-space: normal; /* Prevent text from staying on one line */
 	box-sizing: border-box; /* Ensures padding is included within width */
