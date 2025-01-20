@@ -39,7 +39,7 @@ window.addEventListener('load', () => {
 		let banner = document.createElement('div');
 		banner.classList.add('cookieBanner');
 		let message = document.createElement('p');
-		message.innerHTML = 'This site uses cookies to provide personalized advertisements and analyze site usage. By continuing to browse, you consent to the use of cookies. <a target="_blank" href="/meta/privacy/index.html">Learn more</a>.';
+		message.innerHTML = 'This site uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a target="_blank" href="/meta/privacy/index.html">privacy page</a>.';
 		banner.appendChild(message);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');

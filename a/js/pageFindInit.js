@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
 	new PagefindUI({
 		element: '#pageFindSearch',
 		showSubResults: false,
-		showImages: false,
+		showImages: true,
 		translations: {
 			placeholder: Math.random() < 0.20 ? 'You can search with this thing' : 'Type here to search'
 		}

@@ -1,5 +1,5 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
-2024.08.09 - 2025.01.18 */
+2024.08.09 - 2025.01.19 */
 
 /* Fonts */
 
@@ -353,24 +353,23 @@ footer {
 /* Images */
 
 img {
-
 	padding: 1rem;
 	max-width: 100%;
-
-	display: block;
-
-	margin-left: auto;
-	margin-right: auto;
-	box-sizing: border-box;
-
-	filter: drop-shadow(0px 0px 4px black); 
-
+	display: block; /* Ensures the image is a block-level element, allowing centering */
+	margin-left: auto; /* Automatically adjusts left margin to center the image */
+	margin-right: auto; /* Automatically adjusts right margin to center the image */
+	box-sizing: border-box; /* Ensures padding and border are included in width/height calculations */
+	filter: drop-shadow(0px 0px 4px black);
 }
 
+/* Ensure the figure element is centered as well */
 figure {
-	display: inline-block; /* Keeps the image and caption together */
-	text-align: center; /* Centers the caption below the image */
+	display: block; /* Ensures that the figure behaves like a block element */
+	text-align: center; /* Centers the caption text below the image */
+	margin: 0 auto; /* Centers the figure (and its contents) within the container */
+	max-width: 100%; /* Prevents the figure from exceeding the width of its container */
 }
+
 
 /* Custom Pagefind Search Styling */
 
@@ -423,13 +422,24 @@ hr {
 	display: none;
 }
 
+/* Tables */
+
 /* table {
+	text-align: center;
 	padding: 1rem;
 }
 
 th, tr {
+	text-align: center;
 	padding: 1rem;
 } */
+
+/* Lists */
+
+ul li {
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
 
 /* Dark Theme */
 
