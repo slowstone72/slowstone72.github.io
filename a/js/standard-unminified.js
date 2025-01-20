@@ -1,6 +1,8 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
 2025.01.17 - 2025.01.20 */
 
+let disqus_config;
+
 window.addEventListener('load', () => {
 	if (window.location.toString().includes('/meta/privacy') || window.location.toString().includes('/meta/settings')) return;
 	let load = () => {
@@ -37,7 +39,7 @@ window.addEventListener('load', () => {
 		let normalizedPath = window.location.pathname;
 		normalizedPath = normalizedPath.replace(/\/index\.html$/, '/');
 		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/'; */
-		var disqus_config = function () {
+		disqus_config = function () {
 			var currentPath = document.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
 			console.log('Disqus URL:', document.location.origin + currentPath);
 			console.log('Disqus Identifier:', currentPath);
