@@ -41,6 +41,7 @@ window.addEventListener('load', () => {
 		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/'; */
 		disqus_config = function () {
 			var currentPath = document.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+			if (!currentPath.endsWith('/')) currentPath += '/';
 			console.log('Disqus URL:', document.location.origin + currentPath);
 			console.log('Disqus Identifier:', currentPath);
 			console.log('Disqus Title', document.title);
