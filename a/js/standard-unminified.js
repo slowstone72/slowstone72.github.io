@@ -35,10 +35,13 @@ window.addEventListener('load', () => {
 		googleAds.crossOrigin = 'anonymous';
 		document.head.appendChild(googleAds); */
 		/* Disqus Comments: */ if (!window.location.pathname.includes('/tech/')) return;
-		/* let baseUrl = window.location.origin ? window.location.origin : window.location.protocol + "//" + window.location.host;
-		let normalizedPath = window.location.pathname;
-		normalizedPath = normalizedPath.replace(/\/index\.html$/, '/');
-		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/'; */
+		let canonicalLink = document.querySelector('link[rel="canonical"]');
+		if (!canonicalLink) {
+			canonicalLink = document.createElement('link');
+			canonicalLink.setAttribute('rel', 'canonical');
+			document.head.appendChild(canonicalLink);
+		}
+		canonicalLink.setAttribute('href', window.location.href.replace(/\/index\.html$/, '/').replace(/\/$/, '/'));
 		disqus_config = function () {
 			var currentPath = document.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
 			if (!currentPath.endsWith('/')) currentPath += '/';
