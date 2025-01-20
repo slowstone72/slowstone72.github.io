@@ -33,6 +33,15 @@ window.addEventListener('load', () => {
 		googleAds.crossOrigin = 'anonymous';
 		document.head.appendChild(googleAds); */
 		/* Disqus Comments: */ if (!window.location.pathname.includes('/tech/')) return;
+		var disqus_config = function () {
+			baseUrl = window.location.origin;
+			if (!baseUrl) return;
+			let normalizedPath = window.location.pathname;
+			if (!/\.[a-zA-Z0-9]+$/.test(normalizedPath)) normalizedPath = normalizedPath.replace(/\/$/, '') + '.html';
+			this.page.url = baseUrl + normalizedPath;
+		}
+		// Define Disqus configuration variables
+		baseUrl + normalizedPath; // Ensure unique URL
 		let disqusContainer = document.createElement('div');
 		disqusContainer.className = 'box';
 		disqusContainer.id = 'disqus_thread';
