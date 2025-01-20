@@ -94,5 +94,10 @@ window.addEventListener('load', () => {
 		banner.appendChild(no);
 		banner.appendChild(mby);
 		document.body.appendChild(banner);
+	} else {
+		let footer = document.querySelector('footer');
+		let msg = document.createElement('p'); 
+		msg.innerHTML = `<a target="_blank" href="/meta/settings/index.html">Settings</a>`;
+		if (footer) footer.appendChild(msg);
 	}
 });
