@@ -34,12 +34,13 @@ window.addEventListener('load', () => {
 		document.head.appendChild(googleAds); */
 		/* Disqus Comments: */ if (!window.location.pathname.includes('/tech/')) return;
 		let baseUrl = window.location.origin ? window.location.origin : window.location.protocol + "//" + window.location.host;
-		normalizedPath = window.location.pathname;
-		if (!/\.[a-zA-Z0-9]+$/.test(normalizedPath)) normalizedPath = normalizedPath.replace(/\/$/, '') + '/index.html';
+		let normalizedPath = window.location.pathname;
+		normalizedPath = normalizedPath.replace(/\/index\.html$/, '/');
+		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/';
 		var disqus_config = function () {
 			if (!baseUrl) return;
 			this.page.url = baseUrl + normalizedPath;
-			this.page.identifier = baseUrl + normalizedPath;
+			this.page.identifier = normalizedPath;
 		}
 		let disqusContainer = document.createElement('div');
 		disqusContainer.className = 'box';
