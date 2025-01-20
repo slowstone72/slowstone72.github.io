@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
 		normalizedPath = normalizedPath.replace(/\/index\.html$/, '/');
 		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/'; */
 		var disqus_config = function () {
-			this.page.url = document.location.href;
+			this.page.url = document.location.origin;
 			this.page.identifier = document.location.pathname.replace(/\/index\.html$/, '/');
 		}
 		let disqusContainer = document.createElement('div');
