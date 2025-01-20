@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
 		googleAds.crossOrigin = 'anonymous';
 		document.head.appendChild(googleAds); */
 		/* Disqus Comments: */ if (!window.location.pathname.includes('/tech/')) return;
-		let baseUrl = baseUrl = window.location.origin ? window.location.origin : window.location.protocol + "//" + window.location.host;
+		let baseUrl = window.location.origin ? window.location.origin : window.location.protocol + "//" + window.location.host;
 		var disqus_config = function () {
 			if (!baseUrl) return;
 			let normalizedPath = window.location.pathname;
