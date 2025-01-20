@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
 		document.head.appendChild(googleAds); */
 		/* Disqus Comments: */ if (!window.location.pathname.includes('/tech/')) return;
 		var disqus_config = function () {
-			let baseUrl = window.location.origin;
+			let baseUrl = window.location.origin ? window.location.origin : window.location.protocol + "//" + window.location.host;
 			if (!baseUrl) return;
 			let normalizedPath = window.location.pathname;
 			if (!/\.[a-zA-Z0-9]+$/.test(normalizedPath)) normalizedPath = normalizedPath.replace(/\/$/, '') + '.html';
