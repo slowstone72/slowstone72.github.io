@@ -40,11 +40,11 @@ window.addEventListener('load', () => {
 				document.head.appendChild(canonical);
 			}
 			canonical.setAttribute('href', window.location.href.replace(/\/index\.html$/, '/').replace(/\/$/, '/'));
-			let path = document.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+			let path = document.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
 			if (!path.endsWith('/')) path += '/';
-			/* console.log('Disqus URL:', document.location.origin + path);
+			console.log('Disqus URL:', document.location.origin + path);
 			console.log('Disqus Identifier:', path);
-			console.log('Disqus Title:', document.title); */
+			console.log('Disqus Title:', document.title);
 			disqus_config = function () {
 				this.page.url = document.location.origin + path;
 				this.page.identifier = path;
