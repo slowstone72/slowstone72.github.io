@@ -97,7 +97,7 @@ window.addEventListener('load', () => {
 	} else {
 		let footer = document.querySelector('footer');
 		let msg = document.createElement('p'); 
-		msg.innerHTML = `<a target="_blank" href="/meta/settings/index.html">Settings</a>`;
+		msg.innerHTML = `<a href="/meta/settings/index.html">Settings</a>`;
 		if (footer) footer.appendChild(msg);
 	}
 });
