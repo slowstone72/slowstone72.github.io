@@ -37,7 +37,7 @@ window.addEventListener('load', () => {
 		var disqus_config = function () {
 			if (!baseUrl) return;
 			let normalizedPath = window.location.pathname;
-			if (!/\.[a-zA-Z0-9]+$/.test(normalizedPath)) normalizedPath = normalizedPath.replace(/\/$/, '') + '.html';
+			if (!/\.[a-zA-Z0-9]+$/.test(normalizedPath)) normalizedPath = normalizedPath.replace(/\/$/, '') + '/index.html';
 			this.page.url = baseUrl + normalizedPath;
 		}
 		let disqusContainer = document.createElement('div');
