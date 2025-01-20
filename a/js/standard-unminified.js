@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
 		normalizedPath = normalizedPath.replace(/\/index\.html$/, '/');
 		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/'; */
 		var disqus_config = function () {
-			this.page.url = document.location.origin + document.location.pathname.replace(/\/index\.html$/, '/');
+			this.page.url = document.location.origin + document.location.pathname.replace(/\/index\.html$/, document.location.pathname.endsWith('/') ? '' : '/');
 			this.page.identifier = document.location.pathname.replace(/\/index\.html$/, document.location.pathname.endsWith('/') ? '' : '/');
 		}
 		let disqusContainer = document.createElement('div');
