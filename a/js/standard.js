@@ -1,5 +1,5 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.01.18 */
+2025.01.17 - 2025.01.20 */
 
 window.addEventListener('load', () => {
 	if (window.location.toString().includes('/meta/privacy') || window.location.toString().includes('/meta/settings')) return;
@@ -24,14 +24,24 @@ window.addEventListener('load', () => {
 			let statNotice = document.createElement('p'); 
 			statNotice.innerHTML = `<a href="${privacy}">Privacy Policy</a>`;
 			footer.appendChild(statNotice);
-		}
-		if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
+		} // Google AdSense:
+		/* if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
 		if (localStorage.enableAds !== 'true' || window.location.toString().includes('/writing/')) return;
 		let googleAds = document.createElement('script');
 		googleAds.async = true;
 		googleAds.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2986674631207548';
 		googleAds.crossOrigin = 'anonymous';
-		document.head.appendChild(googleAds);
+		document.head.appendChild(googleAds); */
+		/* Disqus Comments: */ if (!window.location.pathname.includes('/tech/')) return;
+		let disqusContainer = document.createElement('div');
+		disqusContainer.className = 'box';
+		disqusContainer.id = 'disqus_thread';
+		let script = document.createElement('script');
+		script.src = 'https://callumfisher.disqus.com/embed.js';
+		script.setAttribute('data-timestamp', + new Date());
+		disqusContainer.appendChild(script);
+		let mainDiv = document.querySelector('main');
+		if (mainDiv) mainDiv.appendChild(disqusContainer);
 	}
 	if (typeof localStorage.cookiesAccepted !== 'undefined' && localStorage.cookiesAccepted === 'true') {
 		load();
@@ -39,7 +49,7 @@ window.addEventListener('load', () => {
 		let banner = document.createElement('div');
 		banner.classList.add('cookieBanner');
 		let message = document.createElement('p');
-		message.innerHTML = 'This site uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a target="_blank" href="/meta/privacy/index.html">privacy page</a>.';
+		message.innerHTML = 'This site uses cookies to provide personalized advertisements and analyze site usage. Additionally, <a href="https://disqus.com/">Disqus</a> is used to provide comments on some pages and may use cookies. For more information, see the <a target="_blank" href="/meta/privacy/index.html">privacy page</a>.';
 		banner.appendChild(message);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');
@@ -56,8 +66,15 @@ window.addEventListener('load', () => {
 			localStorage.setItem('cookiesAccepted', 'false');
 			document.body.removeChild(banner);
 		});
+		let mby = document.createElement('a');
+		mby.classList.add('button');
+		mby.textContent = 'Customize';
+		mby.addEventListener('click', () => {
+			window.location.href = '/meta/settings/index.html';
+		});
 		banner.appendChild(yes);
 		banner.appendChild(no);
+		banner.appendChild(mby);
 		document.body.appendChild(banner);
 	}
 });
