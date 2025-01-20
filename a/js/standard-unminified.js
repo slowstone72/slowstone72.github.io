@@ -1,7 +1,7 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
 2025.01.17 - 2025.01.20 */
 
-let disqus_config;
+var disqus_config;
 
 window.addEventListener('load', () => {
 	if (window.location.toString().includes('/meta/privacy') || window.location.toString().includes('/meta/settings')) return;
