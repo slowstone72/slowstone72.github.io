@@ -4,7 +4,7 @@
 var disqus_config;
 
 window.addEventListener('load', () => {
-	if (window.location.toString().includes('/meta/privacy') || window.location.toString().includes('/meta/settings')) return;
+	if (window.Location.pathname.startsWith('/writing') || window.location.pathname.startsWith('/meta/privacy') || window.location.pathname.startsWith('/meta/settings')) return;
 	let load = () => {
 		let footer = document.querySelector('footer');
 		if (typeof localStorage.enableAnalytics === 'undefined') localStorage.setItem('enableAnalytics', 'true');
