@@ -38,9 +38,14 @@ window.addEventListener('load', () => {
 		normalizedPath = normalizedPath.replace(/\/index\.html$/, '/');
 		if (!normalizedPath.endsWith('/')) normalizedPath = normalizedPath + '/'; */
 		var disqus_config = function () {
-			this.page.url = document.location.origin + document.location.pathname.replace(/\/index\.html$/, document.location.pathname.endsWith('/') ? '' : '/');
-			this.page.identifier = document.location.pathname.replace(/\/index\.html$/, document.location.pathname.endsWith('/') ? '' : '/');
-		}
+			var currentPath = document.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+			console.log('Disqus URL:', document.location.origin + currentPath);
+			console.log('Disqus Identifier:', currentPath);
+			console.log('Disqus Title', document.title);
+			this.page.url = document.location.origin + currentPath;
+			this.page.identifier = currentPath;
+			this.page.title = document.title;
+		}		
 		let disqusContainer = document.createElement('div');
 		disqusContainer.className = 'box';
 		disqusContainer.id = 'disqus_thread';
