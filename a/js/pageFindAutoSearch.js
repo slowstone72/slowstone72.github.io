@@ -4,7 +4,8 @@
 window.addEventListener('load', () => {
 	let dirs = {
 		'/epicos': '/tech/20250113-epicos/index.html',
-		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
+		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano',
+		'/requests': '/tech/20250115-requests-mpp'
 	}
 	if (Object.keys(dirs).includes(window.location.pathname)) {
 		document.title = 'Redirecting...';
