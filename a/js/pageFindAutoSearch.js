@@ -2,6 +2,11 @@
 2024.08.26 - 2025.01.22 */
 
 window.addEventListener('load', () => {
+	let dirs = {
+		'epicos': '/tech/20250113-epicos/index.html',
+		'namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
+	}
+	if (Object.keys(dirs).includes(window.location.pathname)) location.window.location.replace(dirs[window.location.pathname]); 
 	let pageFindSearch = new PagefindUI({
 		element: '#pageFindSearch',
 		showSubResults: false,
@@ -11,7 +16,7 @@ window.addEventListener('load', () => {
 		}
 	});
 	let paths = location.pathname.split('/');
-	let q = `${paths[paths.length - 1]}${paths[paths.length - 2] ? ' ' + paths[paths.length - 2] : ''}`.replaceAll('index.html', '').trim();
+	let q = `${paths[paths.length - 1]}${paths[paths.length - 2] ? ' ' + paths[paths.length - 2] : ''}`.replaceAll('index.html', '').replaceAll('%20', '').trim();
 	document.getElementById('heading').innerText = `Searching for '${q}'...`;
 	pageFindSearch.triggerSearch(q);
 });
