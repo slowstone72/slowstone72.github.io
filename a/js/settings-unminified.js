@@ -27,9 +27,9 @@ window.addEventListener('load', () => {
 		let toggleCmts = document.getElementById('toggleCmts');
 		if (toggleCmts) {
 			if (localStorage.getItem('enableCmts') === 'true') {
-				toggleCmts.innerText = 'Disable Gisqus for Comments';
+				toggleCmts.innerText = 'Disable Giscus for Comments';
 			} else {
-				toggleCmts.innerText = 'Enable Gisqus for Comments';
+				toggleCmts.innerText = 'Enable Giscus for Comments';
 			}
 		}
 		// Cookies:
@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
 		if (localStorage.getItem('cookiesAccepted') !== 'true') {
 			if (toggleAnalytics) toggleAnalytics.classList.add('inactive');
 			if (toggleAds) toggleAds.classList.add('inactive');
-			if (toggleCmts) toggleCmts.classList.add('inactive');
+			// if (toggleCmts) toggleCmts.classList.add('inactive');
 		}
 	}
 	siteSettings = {
@@ -73,14 +73,14 @@ window.addEventListener('load', () => {
 			location.reload();
 		},
 		toggleCmts: () => {
-			if (localStorage.getItem('cookiesAccepted') !== 'true') return;
+			// if (localStorage.getItem('cookiesAccepted') !== 'true') return;
 			let btn = document.getElementById('toggleCmts');
 			if (localStorage.getItem('enableCmts') === 'true') {
 				localStorage.setItem('enableCmts', 'false');
-				btn.innerText = 'Enable Gisqus for Comments';
+				btn.innerText = 'Enable Giscus for Comments';
 			} else {
 				localStorage.setItem('enableCmts', 'true');
-				btn.innerText = 'Disable Gisqus for Comments';
+				btn.innerText = 'Disable Giscus for Comments';
 			}
 			location.reload();
 		},
