@@ -23,17 +23,17 @@ window.addEventListener('load', () => {
 			notice.innerHTML = `<a href="/meta/privacy/index.html">Privacy Policy</a>`;
 			footer.appendChild(notice);
 		} // Google AdSense:
-		if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
+		/* if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
 		if (localStorage.enableAds === 'true' && !window.location.pathname.startsWith('/writing')) {
 			let googleAds = document.createElement('script');
 			googleAds.async = true;
 			googleAds.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2986674631207548';
 			googleAds.crossOrigin = 'anonymous';
 			document.head.appendChild(googleAds);
-		} // Disqus Comments:
+		} Disqus Comments: */
 		if (typeof localStorage.enableCmts === 'undefined') localStorage.setItem('enableCmts', 'true');
 		if (localStorage.enableCmts === 'true' && window.location.pathname.startsWith('/tech')) {
-			let canonical = document.querySelector('link[rel="canonical"]');
+			/* let canonical = document.querySelector('link[rel="canonical"]');
 			if (!canonical) {
 				canonical = document.createElement('link');
 				canonical.setAttribute('rel', 'canonical');
@@ -56,6 +56,28 @@ window.addEventListener('load', () => {
 			let script = document.createElement('script');
 			script.src = 'https://callumfisher.disqus.com/embed.js';
 			script.setAttribute('data-timestamp', + new Date());
+			div.appendChild(script);
+			let main = document.querySelector('main');
+			if (main) main.appendChild(div); */
+			let div = document.createElement('div');
+			div.className = 'box';
+			div.id = 'giscus_thread';
+			let script = document.createElement('script');
+			script.src = 'https://giscus.app/client.js';
+			script.setAttribute('data-repo', 'cffisher/cffisher.github.io');
+			script.setAttribute('data-repo-id', 'R_kgDONpbyMA');
+			script.setAttribute('data-category', 'Announcements'); 
+			script.setAttribute('data-category-id', 'DIC_kwDONpbyMM4CmQSu');
+			script.setAttribute('data-mapping', 'url'); // title/url
+			script.setAttribute('data-strict', '1');
+			script.setAttribute('data-reactions-enabled', '1');
+			script.setAttribute('data-emit-metadata', '0');
+			script.setAttribute('data-input-position', 'top');
+			script.setAttribute('data-theme', 'preferred_color_scheme');
+			script.setAttribute('data-lang', 'en');
+			script.setAttribute('data-loading', 'lazy');
+			script.setAttribute('crossorigin', 'anonymous');
+			script.setAttribute('async', '');
 			div.appendChild(script);
 			let main = document.querySelector('main');
 			if (main) main.appendChild(div);
