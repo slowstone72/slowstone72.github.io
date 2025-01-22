@@ -3,10 +3,13 @@
 
 window.addEventListener('load', () => {
 	let dirs = {
-		'epicos': '/tech/20250113-epicos/index.html',
-		'namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
+		'/epicos': '/tech/20250113-epicos/index.html',
+		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
 	}
-	if (Object.keys(dirs).includes(window.location.pathname)) location.window.location.replace(dirs[window.location.pathname]); 
+	if (Object.keys(dirs).includes(window.location.pathname)) {
+		location.window.location.replace(dirs[window.location.pathname]);
+		return;
+	}
 	let pageFindSearch = new PagefindUI({
 		element: '#pageFindSearch',
 		showSubResults: false,
