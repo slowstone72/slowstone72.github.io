@@ -1,8 +1,6 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
 2025.01.17 - 2025.01.22 */
 
-// var disqus_config;
-
 window.addEventListener('load', () => {
 	if (window.location.pathname.startsWith('/writing') || window.location.pathname.startsWith('/meta/privacy') || window.location.pathname.startsWith('/meta/settings')) return;
 	let load = () => {
@@ -36,25 +34,6 @@ window.addEventListener('load', () => {
 		// Comments:
 		if (typeof localStorage.enableCmts === 'undefined') localStorage.setItem('enableCmts', 'true');
 		if (localStorage.enableCmts !== 'true' || !window.location.pathname.startsWith('/tech')) return;
-		/* let path = document.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
-		if (!path.endsWith('/')) path += '/';
-		console.log('Disqus URL:', document.location.origin + path);
-		console.log('Disqus Identifier:', path);
-		console.log('Disqus Title:', document.title);
-		disqus_config = function () {
-			this.page.url = document.location.origin + path;
-			this.page.identifier = path;
-			this.page.title = document.title;
-		}		
-		let div = document.createElement('div');
-		div.className = 'box';
-		div.id = 'disqus_thread';
-		let script = document.createElement('script');
-		script.src = 'https://callumfisher.disqus.com/embed.js';
-		script.setAttribute('data-timestamp', + new Date());
-		div.appendChild(script);
-		let main = document.querySelector('main');
-		if (main) main.appendChild(div); */
 		let div = document.createElement('div');
 		div.className = 'box';
 		div.id = 'giscus_thread';
@@ -84,7 +63,7 @@ window.addEventListener('load', () => {
 		let banner = document.createElement('div');
 		banner.classList.add('cookieBanner');
 		let msg = document.createElement('p');
-		msg.innerHTML = 'This site uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a target="_blank" href="/meta/privacy/index.html">privacy page</a>.';
+		msg.innerHTML = 'This page uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a target="_blank" href="/meta/privacy/index.html">privacy page</a>.';
 		banner.appendChild(msg);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');
@@ -105,9 +84,6 @@ window.addEventListener('load', () => {
 		mby.classList.add('button');
 		mby.textContent = 'Customize';
 		mby.href = '/meta/settings/index.html';
-		/* mby.addEventListener('click', () => {
-			window.location.href = '/meta/settings/index.html';
-		}); */
 		banner.appendChild(yes);
 		banner.appendChild(no);
 		banner.appendChild(mby);
