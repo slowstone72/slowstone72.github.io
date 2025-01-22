@@ -1,5 +1,5 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
-2024.08.09 - 2025.01.19 */
+2024.08.09 - 2025.01.22 */
 
 /* Fonts */
 
@@ -404,6 +404,11 @@ body {
 
 }
 
+.cookieBanner .button:hover {
+	background: white;
+	color: black;
+}
+
 /* Misc. */
 
 hr {
@@ -483,18 +488,6 @@ ul li {
 		color: white;
 	}
 
-	/* Buttons */
-
-	body .button.background {
-		background: #f5deb3;
-		color: black;
-	}
-	
-	body .button.background:hover {
-		background: black;
-		color: white;
-	}
-
 	/* Navbar */
 
 	body .navbar {
@@ -503,6 +496,18 @@ ul li {
 	
 	body .button {
 		color: white;
+	}
+
+	/* Buttons */
+
+	body .button.background {
+		background: #f5deb3;
+		color: black;
+	}
+	
+	body .button.background:hover {
+		background: white;
+		color: black;
 	}
 
 	body .button:hover {
@@ -535,6 +540,21 @@ ul li {
 	}
 
 	.cookieBanner .button {
+		color: black;
+	}
+
+	.cookieBanner .button.background {
+		background: black;
+		color: white;
+	}
+
+	.cookieBanner .button.background:hover {
+		background: #f5deb3;
+		color: black;
+	}
+
+	.cookieBanner .button:hover {
+		background: #f5deb3;
 		color: black;
 	}
 
