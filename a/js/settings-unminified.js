@@ -1,5 +1,5 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.01.20 */
+2025.01.17 - 2025.01.22 */
 
 let siteSettings;
 
@@ -27,9 +27,9 @@ window.addEventListener('load', () => {
 		let toggleCmts = document.getElementById('toggleCmts');
 		if (toggleCmts) {
 			if (localStorage.getItem('enableCmts') === 'true') {
-				toggleCmts.innerText = 'Disable Disqus for Comments';
+				toggleCmts.innerText = 'Disable Gisqus for Comments';
 			} else {
-				toggleCmts.innerText = 'Enable Disqus for Comments';
+				toggleCmts.innerText = 'Enable Gisqus for Comments';
 			}
 		}
 		// Cookies:
@@ -77,10 +77,10 @@ window.addEventListener('load', () => {
 			let btn = document.getElementById('toggleCmts');
 			if (localStorage.getItem('enableCmts') === 'true') {
 				localStorage.setItem('enableCmts', 'false');
-				btn.innerText = 'Enable Disqus for Comments';
+				btn.innerText = 'Enable Gisqus for Comments';
 			} else {
 				localStorage.setItem('enableCmts', 'true');
-				btn.innerText = 'Disable Disqus for Comments';
+				btn.innerText = 'Disable Gisqus for Comments';
 			}
 			location.reload();
 		},
