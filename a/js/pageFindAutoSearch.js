@@ -7,13 +7,16 @@ window.addEventListener('load', () => {
 		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
 	}
 	if (Object.keys(dirs).includes(window.location.pathname)) {
+		document.title = 'Redirecting...';
 		document.getElementById('heading').innerText = 'Redirecting...';
 		let p = document.createElement('p');
 		p.innerHTML = `<a href="${dirs[window.location.pathname]}">Click here if you aren't redirected automatically</a>`;
 		document.getElementById('box').appendChild(p);
 		let pf = document.getElementById('pf');
 		if (pf) pf.parentNode.removeChild(pf);
-		setTimeout(window.location.replace, 2000, dirs[window.location.pathname])
+		setTimeout(() => {
+			window.location.replace(dirs[window.location.pathname]);
+		}, 2000)
 		return;
 	}
 	let pageFindSearch = new PagefindUI({
