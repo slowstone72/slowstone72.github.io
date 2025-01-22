@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
 			})(window, document, 'clarity', 'script', 'pvf9bh18n4');
 			if (!footer) return;
 			let notice = document.createElement('p'); 
-			notice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics.<br>For more information, please refer to the <a href="/meta/privacy/index.html">privacy page</a>.`;
+			notice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics.<br>For more information, see the <a href="/meta/privacy/index.html">privacy page</a>.`;
 			footer.appendChild(notice);
 		} else if (footer) {
 			let notice = document.createElement('p'); 
@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
 		let banner = document.createElement('div');
 		banner.classList.add('cookieBanner');
 		let msg = document.createElement('p');
-		msg.innerHTML = 'This page uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a target="_blank" href="/meta/privacy/index.html">privacy page</a>.';
+		msg.innerHTML = 'This page uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a href="/meta/privacy/index.html">privacy page</a>.';
 		banner.appendChild(msg);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');
