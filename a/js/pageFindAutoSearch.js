@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 		'/epicos': '/tech/20250113-epicos/index.html',
 		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
 	}
-	// if (Object.keys(dirs).includes(window.location.pathname)) {
+	if (Object.keys(dirs).includes(window.location.pathname)) {
 		document.getElementById('heading').innerText = 'Redirecting...';
 		let p = document.createElement('p');
 		p.innerHTML = `<a href="${dirs[window.location.pathname]}">Click here if you aren't redirected automatically</a>`;
@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
 		if (pf) pf.parentNode.removeChild(pf);
 		setTimeout(window.location.replace, 2000, dirs[window.location.pathname])
 		return;
-	// }
+	}
 	let pageFindSearch = new PagefindUI({
 		element: '#pageFindSearch',
 		showSubResults: false,
