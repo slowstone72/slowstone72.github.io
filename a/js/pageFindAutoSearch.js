@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano'
 	}
 	if (Object.keys(dirs).includes(window.location.pathname)) {
-		location.window.location.replace(dirs[window.location.pathname]);
+		window.location.replace(dirs[window.location.pathname]);
 		return;
 	}
 	let pageFindSearch = new PagefindUI({
