@@ -1,5 +1,5 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.01.20 */
+2025.01.17 - 2025.01.22 */
 
 // var disqus_config;
 
@@ -25,63 +25,58 @@ window.addEventListener('load', () => {
 		} // Google AdSense:
 		if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
 		if (localStorage.enableAds === 'true' && !window.location.pathname.startsWith('/writing')) {
-			let googleAds = document.createElement('script');
-			googleAds.async = true;
-			googleAds.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2986674631207548';
-			googleAds.crossOrigin = 'anonymous';
-			document.head.appendChild(googleAds);
-		} // Disqus Comments:
-		if (typeof localStorage.enableCmts === 'undefined') localStorage.setItem('enableCmts', 'true');
-		if (localStorage.enableCmts === 'true' && window.location.pathname.startsWith('/tech')) {
-			/* let canonical = document.querySelector('link[rel="canonical"]');
-			if (!canonical) {
-				canonical = document.createElement('link');
-				canonical.setAttribute('rel', 'canonical');
-				document.head.appendChild(canonical);
-			}
-			canonical.setAttribute('href', window.location.href.replace(/\/index\.html$/, '/').replace(/\/$/, '/'));
-			let path = document.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
-			if (!path.endsWith('/')) path += '/';
-			console.log('Disqus URL:', document.location.origin + path);
-			console.log('Disqus Identifier:', path);
-			console.log('Disqus Title:', document.title);
-			disqus_config = function () {
-				this.page.url = document.location.origin + path;
-				this.page.identifier = path;
-				this.page.title = document.title;
-			}		
-			let div = document.createElement('div');
-			div.className = 'box';
-			div.id = 'disqus_thread';
-			let script = document.createElement('script');
-			script.src = 'https://callumfisher.disqus.com/embed.js';
-			script.setAttribute('data-timestamp', + new Date());
-			div.appendChild(script);
-			let main = document.querySelector('main');
-			if (main) main.appendChild(div); */
-			let div = document.createElement('div');
-			div.className = 'box';
-			div.id = 'giscus_thread';
-			let script = document.createElement('script');
-			script.src = 'https://giscus.app/client.js';
-			script.setAttribute('data-repo', 'cffisher/cffisher.github.io');
-			script.setAttribute('data-repo-id', 'R_kgDONpbyMA');
-			script.setAttribute('data-category', 'Announcements'); 
-			script.setAttribute('data-category-id', 'DIC_kwDONpbyMM4CmQSu');
-			script.setAttribute('data-mapping', 'title'); // title/url
-			script.setAttribute('data-strict', '1');
-			script.setAttribute('data-reactions-enabled', '1');
-			script.setAttribute('data-emit-metadata', '0');
-			script.setAttribute('data-input-position', 'top');
-			script.setAttribute('data-theme', 'preferred_color_scheme');
-			script.setAttribute('data-lang', 'en');
-			script.setAttribute('data-loading', 'lazy');
-			script.setAttribute('crossorigin', 'anonymous');
-			script.setAttribute('async', '');
-			div.appendChild(script);
-			let main = document.querySelector('main');
-			if (main) main.appendChild(div);
+			let scrpt = document.createElement('script');
+			scrpt.async = true;
+			scrpt.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2986674631207548';
+			scrpt.crossOrigin = 'anonymous';
+			document.head.appendChild(scrpt);
 		}
+	}
+	let loadB = () => {
+		// Comments:
+		if (typeof localStorage.enableCmts === 'undefined') localStorage.setItem('enableCmts', 'true');
+		if (localStorage.enableCmts !== 'true' || !window.location.pathname.startsWith('/tech')) return;
+		/* let path = document.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
+		if (!path.endsWith('/')) path += '/';
+		console.log('Disqus URL:', document.location.origin + path);
+		console.log('Disqus Identifier:', path);
+		console.log('Disqus Title:', document.title);
+		disqus_config = function () {
+			this.page.url = document.location.origin + path;
+			this.page.identifier = path;
+			this.page.title = document.title;
+		}		
+		let div = document.createElement('div');
+		div.className = 'box';
+		div.id = 'disqus_thread';
+		let script = document.createElement('script');
+		script.src = 'https://callumfisher.disqus.com/embed.js';
+		script.setAttribute('data-timestamp', + new Date());
+		div.appendChild(script);
+		let main = document.querySelector('main');
+		if (main) main.appendChild(div); */
+		let div = document.createElement('div');
+		div.className = 'box';
+		div.id = 'giscus_thread';
+		let scrpt = document.createElement('script');
+		scrpt.src = 'https://giscus.app/client.js';
+		scrpt.setAttribute('data-repo', 'cffisher/cffisher.github.io');
+		scrpt.setAttribute('data-repo-id', 'R_kgDONpbyMA');
+		scrpt.setAttribute('data-category', 'Announcements'); 
+		scrpt.setAttribute('data-category-id', 'DIC_kwDONpbyMM4CmQSu');
+		scrpt.setAttribute('data-mapping', 'title'); // title/url
+		scrpt.setAttribute('data-strict', '1');
+		scrpt.setAttribute('data-reactions-enabled', '1');
+		scrpt.setAttribute('data-emit-metadata', '0');
+		scrpt.setAttribute('data-input-position', 'top');
+		scrpt.setAttribute('data-theme', 'preferred_color_scheme');
+		scrpt.setAttribute('data-lang', 'en');
+		scrpt.setAttribute('data-loading', 'lazy');
+		scrpt.setAttribute('crossorigin', 'anonymous');
+		scrpt.setAttribute('async', '');
+		div.appendChild(scrpt);
+		let main = document.querySelector('main');
+		if (main) main.appendChild(div);
 	}
 	if (typeof localStorage.cookiesAccepted !== 'undefined' && localStorage.cookiesAccepted === 'true') {
 		load();
@@ -109,9 +104,10 @@ window.addEventListener('load', () => {
 		let mby = document.createElement('a');
 		mby.classList.add('button');
 		mby.textContent = 'Customize';
-		mby.addEventListener('click', () => {
+		mby.href = '/meta/settings/index.html';
+		/* mby.addEventListener('click', () => {
 			window.location.href = '/meta/settings/index.html';
-		});
+		}); */
 		banner.appendChild(yes);
 		banner.appendChild(no);
 		banner.appendChild(mby);
@@ -122,4 +118,5 @@ window.addEventListener('load', () => {
 		msg.innerHTML = `<a href="/meta/settings/index.html">Settings</a>`;
 		if (footer) footer.appendChild(msg);
 	}
+	loadB();
 });
