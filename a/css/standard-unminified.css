@@ -1,16 +1,18 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
-2024.08.09 - 2025.01.22 */
+2024.08.09 - 2025.01.23 */
 
 /* Fonts */
 
 @font-face {
 	font-family: "Dosis";
 	src: url("../f/Dosis/Dosis-Regular.ttf");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Roboto";
 	src: url("../f/Roboto/static/Roboto-Regular.ttf");
+	font-display: swap;
 }
 
 /* Animations */
