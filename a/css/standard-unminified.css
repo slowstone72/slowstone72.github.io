@@ -357,21 +357,34 @@ footer {
 img {
 	padding: 1rem;
 	max-width: 100%;
-	display: block; /* Ensures the image is a block-level element, allowing centering */
-	margin-left: auto; /* Automatically adjusts left margin to center the image */
-	margin-right: auto; /* Automatically adjusts right margin to center the image */
-	box-sizing: border-box; /* Ensures padding and border are included in width/height calculations */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
 	filter: drop-shadow(0px 0px 4px black);
 }
 
-/* Ensure the figure element is centered as well */
+/* Figures for Images */
+
 figure {
-	display: block; /* Ensures that the figure behaves like a block element */
-	text-align: center; /* Centers the caption text below the image */
-	margin: 0 auto; /* Centers the figure (and its contents) within the container */
-	max-width: 100%; /* Prevents the figure from exceeding the width of its container */
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
+/* iframes */
+
+iframe {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+}
 
 /* Custom Pagefind Search Styling */
 
