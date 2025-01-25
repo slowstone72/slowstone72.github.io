@@ -18,13 +18,19 @@ Fonts [Dosis](https://fonts.google.com/specimen/Dosis) and [Roboto](https://font
 
 [Pagefind](https://github.com/CloudCannon/pagefind) search is licensed under the [MIT License](https://github.com/CloudCannon/pagefind/blob/main/LICENSE).
 
-[Microsoft Clarity](https://clarity.microsoft.com/) is used for tracking website usage and user behavior. For more information, please refer to [privacy page](https://cffisher.github.io/meta/privacy/index.html).
+[Microsoft Clarity](https://clarity.microsoft.com/) is used for tracking website usage and user behavior. For more information, please refer to [privacy page](https://cffisher.github.io/m/privacy/index.html).
 
 ## Directories
 
-### /a - assets
+### /a/ - assets
 
 - /a/js - JS Code
 - /a/css - Styles
 - /a/img - Images/GIF
 - /a/f - fonts
+
+### /w/ - writing
+
+### /t/ - tech
+
+## /m/ - meta

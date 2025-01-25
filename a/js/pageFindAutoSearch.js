@@ -1,11 +1,11 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
-2024.08.26 - 2025.01.22 */
+2024.08.26 - 2025.01.25 */
 
 window.addEventListener('load', () => {
 	let dirs = {
-		'/epicos': '/tech/20250113-epicos/index.html',
-		'/namesaver': '/tech/20250114-name-saver-for-multiplayer-piano',
-		'/requests': '/tech/20250115-requests-mpp'
+		'/epicos': '/t/20250113-epicos/index.html',
+		'/namesaver': '/t/20250114-name-saver-for-multiplayer-piano/index.html',
+		'/requests': '/t/20250115-requests-mpp/index.html'
 	}
 	if (Object.keys(dirs).includes(window.location.pathname)) {
 		document.title = 'Redirecting...';

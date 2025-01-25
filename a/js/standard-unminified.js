@@ -1,8 +1,8 @@
 /* Copyright (©) 2025 Callum Fisher - cf.fisher.bham@gmail.com
-2025.01.17 - 2025.01.22 */
+2025.01.17 - 2025.01.25 */
 
 window.addEventListener('load', () => {
-	if (window.location.pathname.startsWith('/writing') || window.location.pathname.startsWith('/meta/privacy') || window.location.pathname.startsWith('/meta/settings')) return;
+	if (window.location.pathname.startsWith('/w') || window.location.pathname.startsWith('/m/privacy') || window.location.pathname.startsWith('/m/settings')) return;
 	let load = () => {
 		let footer = document.querySelector('footer');
 		if (typeof localStorage.enableAnalytics === 'undefined') localStorage.setItem('enableAnalytics', 'true');
@@ -14,11 +14,11 @@ window.addEventListener('load', () => {
 			})(window, document, 'clarity', 'script', 'pvf9bh18n4');
 			if (!footer) return;
 			let notice = document.createElement('p'); 
-			notice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics.<br>For more information, see the <a href="/meta/privacy/index.html">privacy page</a>.`;
+			notice.innerHTML = `This page uses <a target="_blank" href="https://clarity.microsoft.com/">Microsoft Clarity</a> for analytics.<br>For more information, see the <a href="/m/privacy/index.html">privacy page</a>.`;
 			footer.appendChild(notice);
 		} else if (footer) {
 			let notice = document.createElement('p'); 
-			notice.innerHTML = `<a href="/meta/privacy/index.html">Privacy Policy</a>`;
+			notice.innerHTML = `<a href="/m/privacy/index.html">Privacy Policy</a>`;
 			footer.appendChild(notice);
 		} // Google AdSense:
 		if (typeof localStorage.enableAds === 'undefined') localStorage.setItem('enableAds', 'true');
@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
 	let loadB = () => {
 		// Comments:
 		if (typeof localStorage.enableCmts === 'undefined') localStorage.setItem('enableCmts', 'true');
-		if (localStorage.enableCmts !== 'true' || !window.location.pathname.startsWith('/tech')) return;
+		if (localStorage.enableCmts !== 'true' || !window.location.pathname.startsWith('/t')) return;
 		let div = document.createElement('div');
 		div.className = 'box';
 		div.id = 'giscus_thread';
@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
 		let banner = document.createElement('div');
 		banner.classList.add('cookieBanner');
 		let msg = document.createElement('p');
-		msg.innerHTML = 'This page uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a href="/meta/privacy/index.html">privacy page</a>.';
+		msg.innerHTML = 'This page uses cookies to provide personalized advertisements and analyze site usage. For more information, see the <a href="/m/privacy/index.html">privacy page</a>.';
 		banner.appendChild(msg);
 		let yes = document.createElement('a');
 		yes.classList.add('button', 'background');
@@ -83,7 +83,7 @@ window.addEventListener('load', () => {
 		let mby = document.createElement('a');
 		mby.classList.add('button');
 		mby.textContent = 'Customize';
-		mby.href = '/meta/settings/index.html';
+		mby.href = '/m/settings/index.html';
 		banner.appendChild(yes);
 		banner.appendChild(no);
 		banner.appendChild(mby);
@@ -91,7 +91,7 @@ window.addEventListener('load', () => {
 	} else {
 		let footer = document.querySelector('footer');
 		let msg = document.createElement('p'); 
-		msg.innerHTML = `<a href="/meta/settings/index.html">Settings</a>`;
+		msg.innerHTML = `<a href="/m/settings/index.html">Settings</a>`;
 		if (footer) footer.appendChild(msg);
 	}
 	loadB();
