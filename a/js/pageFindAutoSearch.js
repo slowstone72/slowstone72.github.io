@@ -30,6 +30,7 @@ window.addEventListener('load', () => {
 	});
 	let paths = location.pathname.split('/');
 	let q = `${paths[paths.length - 1]}${paths[paths.length - 2] ? ' ' + paths[paths.length - 2] : ''}`.replaceAll('index.html', '').replaceAll('%20', '').trim();
+	if (typeof q.substring(0, 7) === 'number') q = q.replaceAll('-', ' ');
 	document.getElementById('heading').innerText = `Searching for '${q}'...`;
 	pageFindSearch.triggerSearch(q);
 });
