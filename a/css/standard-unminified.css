@@ -1,5 +1,5 @@
 /* Copyright (©) 2024-2025 Callum Fisher - cf.fisher.bham@gmail.com
-2024.08.09 - 2025.01.26 */
+2024.08.09 - 2025.01.27 */
 
 /* Fonts */
 
@@ -330,10 +330,10 @@ footer {
 	.menu-items a {
 		display: block; /* Make sure the buttons stack vertically */
 		width: 100%; /* Ensure links span the full width of the menu */
-		text-align: left; /* Align text to the left */
-		padding: 0.8rem 1rem; /* Add padding for better spacing */
+		text-align: left;
+		padding: 0.8rem 1rem;
 		box-sizing: border-box; /* Include padding and border in element's total width */
-		border-radius: 5px; /* Ensure buttons have rounded corners */
+		border-radius: 5px;
 	}
 }
 
@@ -417,7 +417,7 @@ body {
 	z-index: 9999;
 	display: block;
 	/* animation: fadeIn 1s ease; */
-	overflow-wrap: break-word; /* Ensures long strings wrap */
+	overflow-wrap: break-word;
 	white-space: normal; /* Prevent text from staying on one line */
 	box-sizing: border-box; /* Ensures padding is included within width */
 
